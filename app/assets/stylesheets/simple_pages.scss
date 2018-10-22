@@ -1,3 +1,66 @@
 // Place all the styles related to the simple_pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background-color: grey;
+  color: #34495e;
+  position: absolute;
+}
+
+#navbar {
+  height: 100px;
+  color: red;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+
+#footer {
+  height: 40px;
+  background-color: #212529;
+  position: absolute;
+  bottom: auto;
+  width: 100%;
+  color: #CCCCCC;
+}
+
+
+#img {
+  padding-left: 500px;
+  padding-right: 500px;
+  padding-top: 500px;
+  padding-bottom: 500px;
+}
+
+#contact-content {
+  color: white;
+}
+
+#home-content {
+  color: white;
+}
+
+
+
+
+
+
+
+h1,
+h2,
+h3, {
+  font-family: Futura, Helvetica, Arial, sans-serif;
+}
+
+p1,
+p2,
+p3, {
+  font-family: Georgia, Times-New-Roman, Palatino, serif;
+}
+
+li1,
+li2,
+li3, {
+  font-family: Georgia, Times-New-Roman, Palatino, serif;
+}
