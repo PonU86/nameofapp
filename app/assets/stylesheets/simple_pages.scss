@@ -9,11 +9,21 @@ body {
 
 #navbar {
   height: 100px;
-  color: red;
-  padding-left: 20px;
-  padding-right: 20px;
+  background-color: #f3f3f3;
+  color: white;
+  margin: 0;
+  position: fixed;
 }
 
+
+// #navbar {
+//  float: left;
+//  color: #f2f2f2;
+//  text-align: center;
+//  padding: 14px 16px;
+//  text-decoration: none;
+//  font-size: 17px;
+// }
 
 
 #footer {
