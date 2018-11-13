@@ -1,0 +1,9 @@
+class SimplePagesController < ApplicationController
+  layout "static"
+...
+
+
+def index
+  @products = Product.limit(3)
+  render layout: "products"
+end
