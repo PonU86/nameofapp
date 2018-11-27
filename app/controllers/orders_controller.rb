@@ -1,4 +1,6 @@
 class OrdersController < ApplicationController
+  before_action :authenticate_user!
+
   def index
     Order.create(user_id: 1, product_id: 1, total: 10.0)
     Order.create(user_id: 2, product_id: 2, total: 5.0)
@@ -17,4 +19,6 @@ class OrdersController < ApplicationController
 
   def destroy
   end
+
+
 end

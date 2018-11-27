@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+  resources :users
   resources :products, :invoices, :orders, :users
   get 'simple_pages/about'
   get 'simple_pages/contact'
