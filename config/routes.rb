@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :users
-  resources :products, :invoices, :orders, :users
+  resources :products do
+    resources :comments
+  end
+  resources :invoices
+  resources :orders
   get 'simple_pages/about'
   get 'simple_pages/contact'
   get 'simple_pages/index'
