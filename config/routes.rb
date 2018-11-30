@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :products, :invoices, :orders, :users
+  resources :products do
+    resources :comments
+  end 
+  resources :invoices
+  resources :orders
+  resoucres :users
   get 'simple_pages/about'
   get 'simple_pages/contact'
   get 'simple_pages/index'
