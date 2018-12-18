@@ -8,10 +8,9 @@ class ProductsController < ApplicationController
       search_term = params[:q]
       Product.where("name LIKE ?", "%#{search_term}%")
     else
-      @products = Product.all
+      @products = Product.all, Product.order("name").page(params[:page]).per_page(5)
     end
 
-    @products = Product.order("name").page(params[:page]).per_page(5)
   end
 
   # GET /products/1
