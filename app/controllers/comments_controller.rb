@@ -24,7 +24,7 @@ class CommentsController < ApplicationController
 			@comment = Comment.find(params[:id])
 			product = @comment.product
 			@comment.destroy
-			redirected_to product
+			redirect_to product
 	  end
 
 	  private
