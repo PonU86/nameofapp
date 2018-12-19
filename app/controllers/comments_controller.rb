@@ -2,8 +2,8 @@ class CommentsController < ApplicationController
   def create
     @product = Product.find(params[:product_id])
 		if @comment = @product.comments.new(comment_params)
-    if @comment.user = current_user
-    if @comment.save
+    @comment.user = current_user
+    @comment.save
     redirect_to product_path(@product)
   end
 
