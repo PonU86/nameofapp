@@ -5,7 +5,6 @@ class CommentsController < ApplicationController
 	    @comment.user = current_user
 	    @comment.save
 			@user = current_user
-	    redirect_to product_path(@product)
 
 
 			respond_to do |format|
