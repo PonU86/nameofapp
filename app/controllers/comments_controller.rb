@@ -9,7 +9,6 @@ class CommentsController < ApplicationController
 
 
 			respond_to do |format|
-				self.response_body = nil
 				if @comment.save
 					format.html { redirect_to @product, notice: 'Review was created successfully.' }
 					format.json { render :show, status: :created, location: @product }
