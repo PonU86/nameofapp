@@ -5,7 +5,9 @@
       <p>
         <%= comment.user.first_name %> <small><em><%= "#{time_ago_in_words(comment.created_at)} ago" %></em></small>
 
-        
+        <%= if signed_in? && current_user.admin? %>
+          <%= link_to destroy_user_session_path, method: :delete do %>
+        <% end %>
       </p>
       <p><%= "Rating: #{comment.rating}/5" %></p>
       <p><%= comment.body %></p>
