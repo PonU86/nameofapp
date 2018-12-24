@@ -35,7 +35,7 @@
 <%= link_to 'Back', products_path %>
 <br>
 <p>Here is what other people are saying about this product</p>
-<h3><%= @product.highest_rating_comment.body %></h3>
+<h3><%= @product.highest_rating_comment&.body %></h3>
 <br>
 <%= render 'new_comment' %>
 <%= render 'comments' %>
