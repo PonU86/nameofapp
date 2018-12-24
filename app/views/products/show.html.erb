@@ -34,8 +34,10 @@
 <%= link_to 'Edit', edit_product_path(@product) %> |
 <%= link_to 'Back', products_path %>
 <br>
-<p>Here is what other people are saying about this product</p>
-<h3><%= @product.highest_rating_comment&.body %></h3>
+<% if @product.comments.any? %>
+  <p>Here is what other people are saying about this product</p>
+  <h3><%= @product.highest_rating_comment&.body %></h3>
+<% end %>
 <br>
 <%= render 'new_comment' %>
 <%= render 'comments' %>
