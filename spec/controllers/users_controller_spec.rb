@@ -12,7 +12,7 @@ describe UsersController, type: :controller do
       before do
         sign_in @user
       end
-
+  
       it 'loads correct user details' do
         get :show, params: { id: @user.id }
         expect(assigns(:user)).to eq @user
@@ -24,8 +24,6 @@ describe UsersController, type: :controller do
         expect(response).to redirect_to(root_path)
         expect(response).to have_http_status(302)
       end
-
-
     end
 
     context 'when a user is not logged in' do
@@ -35,5 +33,4 @@ describe UsersController, type: :controller do
       end
     end
   end
-
 end
