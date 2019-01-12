@@ -12,12 +12,10 @@ class PaymentsController < ApplicationController
         currency: "usd",
         source: token,
         description: params[:stripeEmail]
-        receipt_email: @user.email
       )
 
       if charge.paid
         Order.create!(product_id: @product.id, user_id: @user.id, total: @product.price)
-        UserMailer.order_placed(@user, @product).deliver_now
       end
 
     rescue Stripe::CardError => e
