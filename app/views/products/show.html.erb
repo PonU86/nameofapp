@@ -3,12 +3,16 @@
 
 <p>
   <strong>Name:</strong>
-  <%= @product.name %>
+  <% cache @product do %>
+    <%= @product.name %>
+  <% end %>
 </p>
 
 <p>
   <strong>Description:</strong>
-  <%= @product.description %>
+  <% cache @product do %>
+    <%= @product.description %>
+  <% end %>
 </p>
 
 
