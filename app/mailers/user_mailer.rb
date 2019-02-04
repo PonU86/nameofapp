@@ -20,4 +20,12 @@ class UserMailer < ApplicationMailer
     @message = params[:message]
     UserMailer.contact_form(@email, @name, @message).deliver_now
   end
+
+  def order_placed(user, product)
+    return if user.nil?
+    @user = user
+    @product = product
+    mail(to: user.email,
+          subject: "Thanks for your order!")
+  end
 end
