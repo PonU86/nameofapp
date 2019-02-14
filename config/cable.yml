@@ -6,4 +6,4 @@ test:
 
 production:
   adapter: redis
-  url: postgres://kflgtsgohwxisu:92705dbadaf34bd845f429854e47f311a6dde35fadefc1c713d269607722f3fd@ec2-54-235-90-0.compute-1.amazonaws.com:5432/de1gkuqe7adgn1
+  url: redis://redistogo:ade872abb67b326a051dc561c4bb2786@crestfish.redistogo.com:9428/
